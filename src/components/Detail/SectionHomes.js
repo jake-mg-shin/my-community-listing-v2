@@ -18,8 +18,12 @@ function SectionHomes({ homes, avg }) {
                 <p>
                     <Icon name='alarm' size='large' color='yellow'></Icon>
                     <MainDesc>
-                        The average price of all the homes of this community : $
-                        {avg}
+                        The average price of all the homes of this community :
+                        {Object.keys(homes).length === 0 ? (
+                            <span></span>
+                        ) : (
+                            <span>$ {avg}</span>
+                        )}
                     </MainDesc>
                 </p>
                 <Link

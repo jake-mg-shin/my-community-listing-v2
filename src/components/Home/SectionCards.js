@@ -23,9 +23,8 @@ function Cards({ id, name, imgUrl, group }) {
                 />
                 <Card.Content
                     style={{
-                        height: '70px',
+                        height: '65px',
                         padding: '5px 2px 0 2px',
-                        display: 'block',
                     }}
                 >
                     <Card.Description style={{ fontWeight: '700' }}>

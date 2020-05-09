@@ -35,20 +35,30 @@ function SectionHomes({ homes, avg }) {
             </div>
             <Divider />
 
-            <CardGrid>
-                {homes.map((h, i) => (
-                    <Padding key={i}>
-                        <SectionHomeCard
-                            id={h.id}
-                            communityId={h.communityId}
-                            price={h.price}
-                            area={h.area}
-                            type={h.type}
-                        />
-                    </Padding>
-                ))}
-            </CardGrid>
-            <br />
+            {Object.keys(homes).length === 0 ? (
+                <div className='ui floating red message'>
+                    <div className='content'>
+                        <p>Sorry, there is no listing</p>
+                    </div>
+                </div>
+            ) : (
+                <>
+                    <CardGrid>
+                        {homes.map((h, i) => (
+                            <Padding key={i}>
+                                <SectionHomeCard
+                                    id={h.id}
+                                    communityId={h.communityId}
+                                    price={h.price}
+                                    area={h.area}
+                                    type={h.type}
+                                />
+                            </Padding>
+                        ))}
+                    </CardGrid>
+                    <br />
+                </>
+            )}
         </>
     );
 }

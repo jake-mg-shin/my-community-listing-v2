@@ -1,7 +1,8 @@
 import React from 'react';
-import { Menu, Dropdown, Image, Container } from 'semantic-ui-react';
+import { Menu, Image, Container } from 'semantic-ui-react';
 import mainLogo from './images/logo.png';
 import styled from 'styled-components';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 class Header extends React.Component {
     state = { activeItem: 'home' };
@@ -26,14 +27,35 @@ class Header extends React.Component {
                                     name='home'
                                     active={activeItem === 'home'}
                                     onClick={this.handleItemClick}
+                                    href='#'
                                 />
-                                <Menu.Item>
-                                    <Dropdown text='Communities' simple item />
+                                <Menu.Item
+                                    name='listing'
+                                    active={activeItem === 'listing'}
+                                    onClick={this.handleItemClick}
+                                >
+                                    <>
+                                        <AnchorLink href='#listing'>
+                                            Listing
+                                        </AnchorLink>
+                                    </>
+                                </Menu.Item>
+                                <Menu.Item
+                                    name='news'
+                                    active={activeItem === 'news'}
+                                    onClick={this.handleItemClick}
+                                >
+                                    <>
+                                        <AnchorLink href='#news'>
+                                            News
+                                        </AnchorLink>
+                                    </>
                                 </Menu.Item>
                                 <Menu.Item
                                     name='about'
                                     active={activeItem === 'about'}
                                     onClick={this.handleItemClick}
+                                    href='#'
                                 />
                             </Menu.Menu>
                         </Menu>

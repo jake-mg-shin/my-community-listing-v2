@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import mapboxgl from 'mapbox-gl';
 import { Container } from 'semantic-ui-react';
 import styled from 'styled-components';
@@ -89,6 +90,10 @@ function SectionMap({ id }) {
 }
 
 export default SectionMap;
+
+SectionMap.propTypes = {
+    id: PropTypes.string.isRequired,
+};
 
 const MapContainer = styled.div`
     position: relative;

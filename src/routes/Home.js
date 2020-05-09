@@ -34,12 +34,10 @@ function Home() {
         //     setLoadingCards(false);
         // };
         const getCommunities = () => {
-            const data = ComsData;
-
             // ordering alphabetically
-            data.sort((a, b) => a.name.localeCompare(b.name));
+            ComsData.sort((a, b) => a.name.localeCompare(b.name));
 
-            setCommunities(data);
+            setCommunities(ComsData);
             setLoadingCards(false);
         };
 
@@ -86,7 +84,9 @@ function Home() {
                     <Loader active inline='centered' />
                 </Dimmer>
             ) : (
-                <SectionCards data={Communities} homes={Homes} />
+                <div id='listing'>
+                    <SectionCards data={Communities} homes={Homes} />
+                </div>
             )}
             <br />
             <br />
@@ -109,7 +109,9 @@ function Home() {
                 {LoadingNews ? (
                     <Loader active inline='centered' />
                 ) : (
-                    <SectionNews news={News} />
+                    <div id='news'>
+                        <SectionNews news={News} />
+                    </div>
                 )}
                 <br />
             </NewsWrapper>

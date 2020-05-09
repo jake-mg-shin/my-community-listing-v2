@@ -21,8 +21,10 @@ function Cards({ id, name, imgUrl, group }) {
                     title={name}
                     height='160'
                 />
-                <Card.Content style={{ height: 75 }}>
-                    <Card.Header>{name}</Card.Header>
+                <Card.Content style={{ height: '80px' }}>
+                    <Card.Description style={{ fontWeight: '700' }}>
+                        {name}
+                    </Card.Description>
                     <Card.Meta textAlign='right'>{group}</Card.Meta>
                 </Card.Content>
             </Card>
@@ -47,14 +49,13 @@ function SectionCards({ data, homes }) {
                 <MainDesc>We have {homes.length} stunning houses</MainDesc>
             </p>
             <CardGrid>
-                {data.map((com) => (
-                    <CardPadding key={com.id}>
+                {data.map((c, i) => (
+                    <CardPadding key={i}>
                         <Cards
-                            key={com.id}
-                            id={com.id}
-                            name={com.name}
-                            imgUrl={com.imgUrl}
-                            group={com.group}
+                            id={c.id}
+                            name={c.name}
+                            imgUrl={c.imgUrl}
+                            group={c.group}
                         />
                     </CardPadding>
                 ))}

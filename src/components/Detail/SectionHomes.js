@@ -36,10 +36,9 @@ function SectionHomes({ homes, avg }) {
             <Divider />
 
             <CardGrid>
-                {homes.map((h) => (
-                    <Padding key={h.id}>
+                {homes.map((h, i) => (
+                    <Padding key={i}>
                         <SectionHomeCard
-                            key={h.id}
                             id={h.id}
                             communityId={h.communityId}
                             price={h.price}

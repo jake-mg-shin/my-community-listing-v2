@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Card, Image, Modal } from 'semantic-ui-react';
 import styled from 'styled-components';
 
-import Images from '../DB/Images.json';
+import Images from '../DB/Images';
 import HomeImages from '../DB/HomeImages';
 
 function SectionHomeCard({ id, communityId, price, area, type }) {
@@ -49,7 +49,7 @@ function SectionHomeCard({ id, communityId, price, area, type }) {
                 <Modal.Description>
                     {HomeImages.map((h, i) => (
                         <Padding key={i}>
-                            <Image fluid key={i} src={h.url} />
+                            <Image fluid src={h.url} />
                         </Padding>
                     ))}
                 </Modal.Description>

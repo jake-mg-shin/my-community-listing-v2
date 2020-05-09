@@ -1,4 +1,4 @@
-const HomeImages = [
+export default [
     {
         url:
             'https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
@@ -16,5 +16,3 @@ const HomeImages = [
             'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
     },
 ];
-
-export default HomeImages;

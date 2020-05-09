@@ -1,4 +1,4 @@
-const GeoEnd = [
+export default [
     {
         name: 'VARSITY',
         coordinates: [-114.1549, 51.0934],
@@ -40,5 +40,3 @@ const GeoEnd = [
         coordinates: [-113.9642, 50.8906],
     },
 ];
-
-export default GeoEnd;

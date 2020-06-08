@@ -20,7 +20,8 @@
         "rss-parser": "^3.7.6",
         "semantic-ui-css": "^2.4.1",
         "semantic-ui-react": "^0.88.2",
-        "styled-components": "^5.1.0"
+        "styled-components": "^5.1.0",
+        "websocket-extensions": "^0.1.4"
     },
     "scripts": {
         "start": "react-scripts start",

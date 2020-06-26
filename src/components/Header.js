@@ -36,7 +36,7 @@ class Header extends React.Component {
                                 >
                                     <>
                                         <AnchorLink href='#listing'>
-                                            Listing
+                                            Listings
                                         </AnchorLink>
                                     </>
                                 </Menu.Item>

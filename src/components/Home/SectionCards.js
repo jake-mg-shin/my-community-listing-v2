@@ -48,7 +48,7 @@ function SectionCards({ data, homes }) {
     return (
         <Container>
             <br />
-            <MainTitle>You can see our listing in Calgary</MainTitle>
+            <MainTitle>Click and Look into our listings</MainTitle>
             <p>
                 <Icon name='bullhorn' size='large' color='red' />
                 <MainDesc>We have {homes.length} stunning houses</MainDesc>
